@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject var prospects = Prospects()
     
     var body: some View {
         TabView {
@@ -32,6 +33,7 @@ struct ContentView: View {
                 }
 
         }
+        .environmentObject(prospects)
     }
 }
 

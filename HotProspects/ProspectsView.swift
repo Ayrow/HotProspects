@@ -12,12 +12,23 @@ struct ProspectsView: View {
         case none, contacted, uncontacted
     }
     
+    @EnvironmentObject var prospects: Prospects
     let filter: FilterType
     
     var body: some View {
         NavigationStack {
-            Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+            Text("People: \(prospects.people.count)")
                 .navigationTitle(title)
+                .toolbar {
+                    Button {
+                        let prospect = Prospect()
+                        prospect.name = "Aymeric"
+                        prospect.emailAddress = "aymeric@gmail.com"
+                        prospects.people.append(prospect)
+                    } label: {
+                        Label("scan", systemImage: "qrcode.viewfinder")
+                    }
+                }
         }
     }
     
@@ -36,5 +47,6 @@ struct ProspectsView: View {
 struct ProspectsView_Previews: PreviewProvider {
     static var previews: some View {
         ProspectsView(filter: .none)
+            .environmentObject(Prospects())
     }
 }
