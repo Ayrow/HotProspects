@@ -42,6 +42,17 @@ struct ProspectsView: View {
             return "Uncontacted people"
         }
     }
+    
+    var filteredProspects: [Prospect]{
+        switch filter {
+        case .none:
+            return prospects.people
+        case .contacted:
+            return prospects.people.filter {$0.isContacted}
+        case .uncontacted:
+            return prospects.people.filter {!$0.isContacted}
+        }
+    }
 }
 
 struct ProspectsView_Previews: PreviewProvider {
