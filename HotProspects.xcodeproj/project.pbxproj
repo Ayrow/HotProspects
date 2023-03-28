@@ -15,6 +15,7 @@
 		94004E0F29D1BDF900A2865E /* MeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94004E0E29D1BDF900A2865E /* MeView.swift */; };
 		94004E1129D1C05100A2865E /* Prospect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94004E1029D1C05100A2865E /* Prospect.swift */; };
 		947BA4B029D2DDCD00EBEB53 /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = 947BA4AF29D2DDCD00EBEB53 /* CodeScanner */; };
+		947BA4B229D2EBF000EBEB53 /* ImageSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947BA4B129D2EBF000EBEB53 /* ImageSaver.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		94004E0C29D1BDF300A2865E /* ProspectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProspectsView.swift; sourceTree = "<group>"; };
 		94004E0E29D1BDF900A2865E /* MeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeView.swift; sourceTree = "<group>"; };
 		94004E1029D1C05100A2865E /* Prospect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prospect.swift; sourceTree = "<group>"; };
+		947BA4B129D2EBF000EBEB53 /* ImageSaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSaver.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				94004E0C29D1BDF300A2865E /* ProspectsView.swift */,
 				94004E1029D1C05100A2865E /* Prospect.swift */,
 				94004E0E29D1BDF900A2865E /* MeView.swift */,
+				947BA4B129D2EBF000EBEB53 /* ImageSaver.swift */,
 				94004E0229D1862100A2865E /* Assets.xcassets */,
 				94004E0429D1862100A2865E /* Preview Content */,
 			);
@@ -155,6 +158,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				94004E0F29D1BDF900A2865E /* MeView.swift in Sources */,
+				947BA4B229D2EBF000EBEB53 /* ImageSaver.swift in Sources */,
 				94004E1129D1C05100A2865E /* Prospect.swift in Sources */,
 				94004E0D29D1BDF300A2865E /* ProspectsView.swift in Sources */,
 				94004E0129D1862000A2865E /* ContentView.swift in Sources */,
@@ -290,6 +294,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "We want to save your QR Code";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -319,6 +324,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "We want to save your QR Code";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
