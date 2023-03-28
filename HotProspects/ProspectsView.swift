@@ -5,6 +5,7 @@
 //  Created by Aymeric Pilaert on 27/03/2023.
 //
 
+import CodeScanner
 import SwiftUI
 
 struct ProspectsView: View {
@@ -13,6 +14,7 @@ struct ProspectsView: View {
     }
     
     @EnvironmentObject var prospects: Prospects
+    @State private var isShowingScanner = false
     let filter: FilterType
     
     var body: some View {
@@ -31,10 +33,7 @@ struct ProspectsView: View {
             .navigationTitle(title)
             .toolbar {
                 Button {
-                    let prospect = Prospect()
-                    prospect.name = "Aymeric"
-                    prospect.emailAddress = "aymeric@gmail.com"
-                    prospects.people.append(prospect)
+                    isShowingScanner = true
                 } label: {
                     Label("scan", systemImage: "qrcode.viewfinder")
                     }
@@ -62,6 +61,11 @@ struct ProspectsView: View {
         case .uncontacted:
             return prospects.people.filter {!$0.isContacted}
         }
+    }
+    
+    func handleScan(result: Result<ScanResult, ScanError>){
+        isShowingScanner = false
+        
     }
 }
 
